@@ -17,14 +17,18 @@ app.listen(port,()=>{
 // });
 
 app.get("/",(req,res)=>{
+    console.log("/");
     res.send('Home path');
 });
 app.get("/apple",(req,res)=>{
+    console.log("/apple");
     res.send('Apple path');
 });
 app.get("/orange",(req,res)=>{
+    console.log("/orange");
     res.send('Orange path');
 });
 app.get("*",(req,res)=>{
-    res.send('Page does not exist');
+    console.log("/empty path");
+    res.send('Page does not exists');
 });
