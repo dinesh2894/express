@@ -5,7 +5,7 @@ const port = 3000;
 
 console.dir(port);
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`App listen is port : ${port}`);
 });
 
@@ -16,19 +16,28 @@ app.listen(port,()=>{
 //     res.send(code);
 // });
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     console.log("/");
     res.send('Home path');
 });
-app.get("/apple",(req,res)=>{
+/*app.get("/apple",(req,res)=>{
     console.log("/apple");
     res.send('Apple path');
-});
-app.get("/orange",(req,res)=>{
+});*/
+/*app.get("/orange",(req,res)=>{
     console.log("/orange");
     res.send('Orange path');
-});
+});*/
+/*
 app.get("*",(req,res)=>{
     console.log("/empty path");
     res.send('Page does not exists');
-});
+});*/
+
+/*
+app.get("/:username/:id", (req, res) => {
+    let {username, id} = req.params;
+    console.log(username);
+    console.log(id);
+    res.send(`This is a @${username}`);
+});*/
