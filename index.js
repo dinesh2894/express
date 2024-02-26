@@ -3,10 +3,16 @@ const app = express();
 
 const port = 3000;
 
+app.set("view engine","ejs");
+
 console.dir(port);
 
 app.listen(port, () => {
     console.log(`App listen is port : ${port}`);
+});
+
+app.get("/",(req,res)=>{
+    res.render('home.ejs');
 });
 
 // app.use((req, res)=>{
